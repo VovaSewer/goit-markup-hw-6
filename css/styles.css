@@ -262,21 +262,35 @@ body {
   right: 8px;
   top: 8px;
   padding: 0;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   position: absolute;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer; 
+}
+
+.modal-close-icon{
+  fill: #000000;
+}
+
+.btn-close:hover .modal-close-icon,
+.btn-close:focus .modal-close-icon {
+  fill: var(--accent-color);
 }
 
 .modal-title{
   font-weight: 700;
-font-size: 20px;
-line-height: 1.15;
-text-align: center;
-letter-spacing: 0.03em;
-color:var(--primary-title-color);
-margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color:var(--primary-title-color);
+  margin-bottom: 12px;
 }
 
 .modal-field{
@@ -285,11 +299,11 @@ margin-bottom: 12px;
 
 .label-text{
   font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.01em;
-color:var(--secondary-color);
-display: block;
-margin-bottom: 4px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color:var(--secondary-color);
+  display: block;
+  margin-bottom: 4px;
 }
 
 .input-wrapper{
@@ -307,6 +321,7 @@ margin-bottom: 4px;
   border-radius: 4px;
   background: transparent;
   outline: none;
+  transition: ;
 }
 
 .modal-input:focus,
@@ -366,9 +381,19 @@ textarea::placeholder{
     justify-content: center;
 } 
 
+.check-link{
+  color: var(--accent-color);
+  text-decoration-skip-ink: none;
+}
+
 .modal-checkbox:checked + .checkbox-text span{
   background-color: var(--accent-color);
-  border: 0;
+  border: none;
+}
+
+.checkbox-block{
+  display: flex;
+  justify-content: center;
 }
 
 .modal-btn{
